@@ -1,0 +1,12 @@
+# Datos de prueba que se cargan en la base de test antes de cada test.
+comprar_pan:
+  title: Comprar pan
+  description: Ir a la panadería de la esquina
+  completed: false
+  created_at: <%= 2.days.ago %>
+
+estudiar_ruby:
+  title: Estudiar Ruby
+  description: Leer la guía de bloques y símbolos
+  completed: true
+  created_at: <%= 1.day.ago %>
