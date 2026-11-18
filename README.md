@@ -52,8 +52,10 @@ curl -X POST http://localhost:9002/tasks \
 ## Tests y cobertura
 
 ```bash
-bin/rails test
+bin/rails db:test:prepare test
 ```
+
+`db:test:prepare` crea o actualiza la base de datos de test a partir de `db/schema.rb`. Es necesario en una copia recién clonada (por ejemplo, en el servidor de CI). Si no, los tests fallan con *"Migrations are pending"*.
 
 El reporte de cobertura (SimpleCov) queda en `coverage/`: `index.html` para verlo en el navegador y `.resultset.json` para SonarQube.
 
